@@ -1,0 +1,13 @@
+<h1> Your Appointment </h1>
+<br>
+Patient: <%= @appointment.patient.name %>
+<br>
+Date: <%= @appointment.date %>
+<br>
+Condition: <%= @appointment.condition %>
+<br>
+Doctor: <%= @appointment.doctor.name %>
+
+<%= button_to "Delete Appointment", appointment_path(@appointment), method: :delete %>
+<br>
+<%= link_to "Edit Appointment", edit_appointment_path(@appointment) %> 

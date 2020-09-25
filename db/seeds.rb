@@ -7,3 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+patients = Patient.create(
+    [
+        {name: "James Rogers"}, 
+        {name: "John Smith"}, 
+        {name: "Stephen Colbert"}
+    ]
+) 
+doctors = Doctor.create(
+    [
+        {name: "Valentina Panic", practice: "Chiropractor", rating: 10},
+        {name: "Nick Riviera", practice: "Dr. Nick's Walk-In Clinic", rating: 1},
+        {name: "Julius Hibbert", practice: "M.D. Family Practice", rating: 7}
+    ]
+) 

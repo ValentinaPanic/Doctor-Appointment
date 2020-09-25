@@ -1,0 +1,29 @@
+
+<% if @appointment.errors.any? %>
+<ul>
+
+    <% @appointment.errors.full_messages.each do |e| %>
+       <li> <%= e %> </li>
+    <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @appointment do |f| %>
+    <%= f.label :patient_id %>
+    <br>
+    <%= f.number_field :patient_id %>
+    <br>
+    <%= f.label :doctor_id %>
+    <br>
+    <%= f.collection_select :doctor_id, Doctor.all, :id, :name %>
+    <br>
+    <%= f.label :condition %>
+    <br>
+    <%= f.text_field :condition %>
+    <br>
+    <%= f.label :date %>
+    <br>
+    <%= f.date_field :date %>
+    <br>
+    <%= f.submit %>
+<% end %> 

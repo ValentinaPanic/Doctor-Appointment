@@ -1,0 +1,17 @@
+<h1> Physician Profile </h1>
+<br>
+Physician: <%= @doctor.name %>
+<br>
+Practice: <%= @doctor.practice %>
+<br>
+Rating: <%= @doctor.rating %>
+<br>
+<br>
+<%= link_to "Book Appointment with this Physician", new_appointment_path %>
+<br>
+<%= link_to "Edit Physician", edit_doctor_path(@doctor) %> 
+<br>
+<%= link_to "Delete Doctor", doctor_path(@doctor), method: :delete %>
+<br>
+<br>
+<%= link_to "Physican Index", doctors_path %>

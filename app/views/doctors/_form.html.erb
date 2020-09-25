@@ -1,0 +1,15 @@
+<%= form_for @doctor do |f| %>
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :practice %>
+    <br>
+    <%= f.text_field :practice %>
+    <br>
+    <%= f.label :rating %>
+    <br>
+    <%= f.number_field :rating %>
+    <br>
+    <%= f.submit %>
+<% end %> 
